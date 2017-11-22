@@ -11,7 +11,7 @@ html {
 
 /* Especificidad: 10*/
  .background {
-    background:url('fondo.jpg') center center no-repeat;
+    background:url('/img/fondo.jpg') center center no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
