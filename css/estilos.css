@@ -126,10 +126,24 @@ header>ul>li a {
         margin-left: 60px;
         margin: 0 auto;
     }
+    .textareaSize {
+        width: auto !important;
+        }
+        form{
+            padding: 0 !important;
+        }
+        
+main {
+    text-align: center;
+    padding: 0 !important;
+    height: 100%;
+    margin: 75px 62px auto;
+    z-index: 3;
+    position: relative;
 }
 
+}
 
-/* Medium devices (desktops, 992px and up) */
 
 @media screen and(min-width: 992px) {
     .centrar {
@@ -139,6 +153,21 @@ header>ul>li a {
         margin-left: 60px;
         margin: 0 auto;
     }
+    .textareaSize {
+        width: auto !important;
+        }
+        form{
+            padding: 0 !important;
+        }
+main {
+    text-align: center;
+    padding: 0 !important;
+    height: 100%;
+    margin: 75px 62px auto;
+    z-index: 3;
+    position: relative;
+}
+
 }
 
 
@@ -152,6 +181,21 @@ header>ul>li a {
         margin-left: 60px;
         margin: 0 auto;
     }
+    .textareaSize {
+        width: auto !important;
+    }
+    form{
+        padding: 0 !important;
+    }
+main {
+    text-align: center;
+    padding: 0 !important;
+    height: 100%;
+    margin: 75px 62px auto;
+    z-index: 3;
+    position: relative;
+}
+
 }
 
 
@@ -159,23 +203,26 @@ header>ul>li a {
 
 main {
     text-align: center;
-    padding: 0;
-    height: 100%;
-    margin: 75px 62px auto;
+   height: 100%;
     z-index: 3;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav{
     z-index: 2;
 }
-
+form{
+    padding-left: 10px;
+    padding-right: 35px;
+}
 /* Especificidad: 10*/
 
 .contacto {
     z-index: 3;
     position: relative;
-    text-align: center;
+   
 }
 
 
@@ -242,8 +289,8 @@ nav{
     padding: 5px;
     color: #FFFFFF;
     font-weight: bold;
-    width: 96%;
-    height: 94.3%;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: 0.3s ease-in-out all;
     top: 0;
@@ -282,7 +329,7 @@ nav{
 .contacto ul {
     color: white;
     list-style-type: none;
-    line-height: 57px;
+    line-height: 33px;
 }
 
 
@@ -294,7 +341,7 @@ nav{
     background: rgba(15, 12, 41, 0.2);
     color: white;
     border-color: rgba(15, 11, 41, 0.2);
-    padding: 6px;
+    margin-top: 10px;
 }
 
 
@@ -306,9 +353,12 @@ nav{
     background: rgba(15, 12, 41, 0.2);
     color: white;
     border-color: rgba(15, 11, 41, 0.2);
-    padding: 6px;
+    margin-top: 10px;
+    overflow: hidden;
 }
-
+.textareaSize {
+    width: 100%;
+    }
 
 /* Especificidad: 10*/
 
