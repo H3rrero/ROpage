@@ -1,18 +1,23 @@
 /* Especificidad: 0*/
+
 * {
-    margin:0;
-    padding:0;
-    font-size: 19px;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
 }
+
+
 /* Especificidad: 1*/
+
 html {
-    height:100%;
+    height: 100%;
 }
- 
+
 
 /* Especificidad: 10*/
- .background {
-    background:url('../img/fondo.jpg') center center no-repeat;
+
+.background {
+    background: url('../img/fondo.jpg') center center no-repeat;
     background-size: cover;
     position: fixed;
     top: 0;
@@ -22,58 +27,74 @@ html {
     z-index: 1;
 }
 
+
 /* Especificidad: 10*/
+
 .layer {
-  
-  
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-   opacity: 0.7;
+    opacity: 0.7;
 }
+
+
 /* Especificidad: 0*/
-.nav {
+
+.mynav {
     z-index: 4;
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
 }
+
+
 /* Especificidad: 2*/
-  header >ul {
+
+header>ul {
     list-style-type: none;
-   
     padding: 0;
-    
     background-color: #0f0c29;
     border-radius: 25px;
     margin: 15px 62px auto;
     text-align: center;
 }
+
+
 /* Especificidad: 3*/
- header >ul >li {
+
+header>ul>li {
     display: inline-block;
     margin: 0px 10px;
     font-family: 'Open Sans', sans-serif;
     transition: 0.5s ease-out all;
 }
+
+
 /* Especificidad: 13*/
-header >ul >li:hover {
-   background-color:white;
-   
-   transition: 0.5s ease-out all;
+
+header>ul>li:hover {
+    background-color: white;
+    transition: 0.5s ease-out all;
 }
+
+
 /* Especificidad: 14*/
- header >ul >li > a:hover {
-   color: #0f0c29;
-   transition: 0.5s ease-out all;
- }
- /* Especificidad: 4*/
- header >ul >li a {
+
+header>ul>li>a:hover {
+    color: #0f0c29;
+    transition: 0.5s ease-out all;
+}
+
+
+/* Especificidad: 4*/
+
+header>ul>li a {
     display: block;
     color: white;
     text-align: center;
@@ -81,140 +102,138 @@ header >ul >li:hover {
     text-decoration: none;
     transition: 0.5s ease-out all;
 }
+
+.imgcar {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.centrar {
+    overflow: hidden;
+    max-width: 891px;
+    margin-left: 60px;
+    margin: 0 auto;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) {
+    .centrar {
+        height: 432px;
+        overflow: hidden;
+        max-width: 891px;
+        margin-left: 60px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media screen and(min-width: 992px) {
+    .centrar {
+        height: 432px;
+        overflow: hidden;
+        max-width: 891px;
+        margin-left: 60px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and(min-width: 1200px) {
+    .centrar {
+        height: 432px;
+        overflow: hidden;
+        max-width: 891px;
+        margin-left: 60px;
+        margin: 0 auto;
+    }
+}
+
+
 /* Especificidad: 1*/
- main{
+
+main {
     text-align: center;
-    
     padding: 0;
     height: 100%;
     margin: 75px 62px auto;
     z-index: 3;
     position: relative;
 }
+
+nav{
+    z-index: 2;
+}
+
 /* Especificidad: 10*/
-.contacto{
-   text-align: left;
-    
-    padding: 0;
-    height: 1000px;
-    margin: 75px 62px auto;
+
+.contacto {
     z-index: 3;
     position: relative;
+    text-align: center;
 }
+
+
 /* Especificidad: 10*/
-.imagenes{
+
+.imagenes {
     max-width: 50%;
     height: 300px;
 }
+
+
 /* Especificidad: 11*/
-.fondo{
+
+.fondo {
     background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    
     opacity: 0.3;
     max-height: 400px;
     height: 300px;
 }
-/* Especificidad: 11*/
-.estadio h1 {
-    color: white;
-    z-index: 4;
-    top: 10px;
-    position: absolute;
-    left: 3%;
-    font-family: 'Open Sans', sans-serif;
-}
-/* Especificidad: 11*/
-.estadio ul {
-    color: white;
-    z-index: 4;
-    top: 60px;
-    position: absolute;
-    left: 3%;
-    list-style-type: none;
-    line-height: 30px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
-}
-/* Especificidad: 11*/
-.estadio div {
-    text-align: right;
-}
-/* Especificidad: 10*/
-.fondoCla{
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    margin-top: 0px;
-    opacity: 0.3;
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-   
-    width: 100%;
-    height: 300px;
-}
-/* Especificidad: 10*/
-.clasificacion{
-position: relative;
-margin-top: 30px;
-}
-/* Especificidad: 10*/
-.imagenCla{
-    max-width: 38%;
-    height: 300px;
-}
-/* Especificidad: 10*/
-.imagenRiv{
-    max-width: 50%;
-    height: 300px;
-    margin-right: 110px;
-}
+
 
 /* Especificidad: 10*/
-.contentJugador{
+
+.contentJugador {
     margin: 0% 5% 2%;
     display: inline-block;
     position: relative;
 }
-/* Especificidad: 11*/
-.clasificacion h1 {
-    color: white;
-    z-index: 4;
-    top: 50%;
-    position: absolute;
-    left: 3%;
-    font-family: 'Open Sans', sans-serif;
-}
-/* Especificidad: 11*/
-.clasificacion div{
-    text-align: right;
-}
-/* Especificidad: 11*/
-.clasificacion p {
-    color: white;
-    z-index: 4;
-    top: 35%;
-    position: absolute;
-    right: 280px;
-    font-family: 'Open Sans', sans-serif;
-}
+
+
 /* Especificidad: 10*/
-.resultNumber{
+
+.resultNumber {
     font-size: 90px;
 }
+
+
 /* Especificidad: 10*/
-.separator{
+
+.separator {
     font-size: 90px;
 }
+
+
 /* Especificidad: 10*/
-.plantilla{
+
+.plantilla {
     text-align: center;
 }
+
+
 /* Especificidad: 10*/
-.fondoPlantilla{
+
+.fondoPlantilla {
     float: left;
     position: absolute;
     left: 0px;
@@ -226,94 +245,135 @@ margin-top: 30px;
     width: 96%;
     height: 94.3%;
     opacity: 0;
-   transition: 0.3s ease-in-out all;
+    transition: 0.3s ease-in-out all;
     top: 0;
 }
+
+
 /* Especificidad: 20*/
-.fondoPlantilla:hover{
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); 
+
+.fondoPlantilla:hover {
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
     opacity: 0.8;
     transition: 0.3s ease-in-out all;
 }
+
+
 /* Especificidad: 10*/
+
 .pdd {
     bottom: 0;
     position: absolute;
     left: 38%;
 }
+
+
 /* Especificidad: 10*/
+
 .centrocampista {
     bottom: 0;
     position: absolute;
     left: 28%;
 }
+
+
 /* Especificidad: 11*/
+
 .contacto ul {
     color: white;
     list-style-type: none;
     line-height: 57px;
-    margin-left: 36%;
 }
+
+
 /* Especificidad: 11*/
+
 .contacto input {
     margin-left: 24px;
     border-radius: 25px;
-    background: rgba(15, 12, 41,0.2);
+    background: rgba(15, 12, 41, 0.2);
     color: white;
-    border-color: rgba(15, 11, 41,0.2);
+    border-color: rgba(15, 11, 41, 0.2);
     padding: 6px;
 }
+
+
 /* Especificidad: 11*/
+
 .contacto textarea {
     margin-left: 20px;
     border-radius: 25px;
-    background: rgba(15, 12, 41,0.2);
+    background: rgba(15, 12, 41, 0.2);
     color: white;
-    border-color: rgba(15, 11, 41,0.2);
+    border-color: rgba(15, 11, 41, 0.2);
     padding: 6px;
 }
+
+
 /* Especificidad: 10*/
-.email{
+
+.email {
     margin-left: 37px !important;
 }
+
+
 /* Especificidad: 11*/
-.contacto button{
+
+.contacto button {
     border-radius: 25px;
-    background: rgba(15, 12, 41,0.2);
+    background: rgba(15, 12, 41, 0.2);
     color: white;
-    border-color: rgba(15, 11, 41,0.2);
+    border-color: rgba(15, 11, 41, 0.2);
     padding: 6px;
 }
+
+
 /* Especificidad: 10*/
-.noticia{
+
+.noticia {
     color: #0f0c29;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 25px;
     padding: 20px;
     margin-top: 20px;
 }
+
+
 /* Especificidad: 11*/
-.noticia p{
+
+.noticia p {
     text-align: left;
     margin-top: 13px;
 }
+
+
 /* Especificidad: 1*/
-footer{
+
+footer {
     text-align: center;
     margin-top: 70px;
 }
+
+
 /* Especificidad: 2*/
-footer a{
+
+footer a {
     position: relative;
     z-index: 6;
 }
+
+
 /* Especificidad: 2*/
-footer p{
+
+footer p {
     position: relative;
     z-index: 6;
     color: white;
 }
+
+
 /* Especificidad: 12*/
-footer p:nth-child(2){
-   margin-bottom: 20px;
+
+footer p:nth-child(2) {
+    margin-bottom: 20px;
 }
