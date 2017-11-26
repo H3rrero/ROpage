@@ -256,6 +256,10 @@ form{
     position: relative;
 }
 
+.inicioImg{
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    opacity: 0.8;
+}
 
 /* Especificidad: 10*/
 
