@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="src/main.js"></script>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -145,62 +146,6 @@
         $('.carousel').carousel({
             interval: 2000
         })</script>
-        <script>
-         
-        function buscar() {
-          var coincidencias = [];
-          $(".modal-body").empty();
-          var valor = $("#inputBuscador").val();
-          $.get('https://h3rrero.github.io/ROpage/index.html', function(response) {
-          if(response.indexOf(valor)>-1)
-          {
-            coincidencias.push({
-              url:"https://h3rrero.github.io/ROpage/index.html",
-              name:"Index"
-            });
-          }
-          
-        });
-          $.get('https://h3rrero.github.io/ROpage/src/noticias.html', function(response) {
-            if(response.indexOf(valor)>-1)
-            {
-              coincidencias.push({
-                url:"https://h3rrero.github.io/ROpage/src/noticias.html",
-                name:"Noticias"
-              });
-            }
-        });
-        $.get('https://h3rrero.github.io/ROpage/src/plantilla.html', function(response) {
-          if(response.indexOf(valor)>-1)
-          {
-            coincidencias.push({
-              url:"https://h3rrero.github.io/ROpage/src/plantilla.html",
-              name:"Plantilla"
-            });
-          }
-        });
-        $.get('https://h3rrero.github.io/ROpage/src/contacto.html', function(response) {
-          if(response.indexOf(valor)>-1)
-          {
-            coincidencias.push({
-              url:"https://h3rrero.github.io/ROpage/src/contacto.html",
-              name:"Contacto"
-            });
-          }
-        });
-       
-        setTimeout(function (params) {
-          for (const i in coincidencias) {
-            $(".modal-body").append("<p>"+coincidencias[i].name+":</p>");
-                $(".modal-body").append("<a href='"+coincidencias[i].url+"'>"+coincidencias[i].url+"</a>");
-        }
-        }      
-        , 1);
-        
-        
-        }
-       
-        </script>
 </body>
 
 </html>
