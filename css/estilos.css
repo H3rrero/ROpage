@@ -249,7 +249,9 @@ form{
     max-height: 400px;
     height: 300px;
 }
-
+.labelNone{
+    display: none;
+}
 
 /* Especificidad: 10*/
 
