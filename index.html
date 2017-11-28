@@ -146,45 +146,44 @@
             interval: 2000
         })</script>
         <script>
-          var host = location.hostname;
-        
+         
         function buscar() {
           var coincidencias = [];
           $(".modal-body").empty();
           var valor = $("#inputBuscador").val();
-          $.get('index.html', function(response) {
+          $.get('https://h3rrero.github.io/ROpage/index.html', function(response) {
           if(response.indexOf(valor)>-1)
           {
             coincidencias.push({
-              url:"index.html",
+              url:"https://h3rrero.github.io/ROpage/index.html",
               name:"Index"
             });
           }
           
         });
-          $.get('src/noticias.html', function(response) {
+          $.get('https://h3rrero.github.io/ROpage/src/noticias.html', function(response) {
             if(response.indexOf(valor)>-1)
             {
               coincidencias.push({
-                url:"src/noticias.html",
+                url:"https://h3rrero.github.io/ROpage/src/noticias.html",
                 name:"Noticias"
               });
             }
         });
-        $.get('src/plantilla.html', function(response) {
+        $.get('https://h3rrero.github.io/ROpage/src/plantilla.html', function(response) {
           if(response.indexOf(valor)>-1)
           {
             coincidencias.push({
-              url:"src/plantilla.html",
+              url:"https://h3rrero.github.io/ROpage/src/plantilla.html",
               name:"Plantilla"
             });
           }
         });
-        $.get('src/contacto.html', function(response) {
+        $.get('https://h3rrero.github.io/ROpage/src/contacto.html', function(response) {
           if(response.indexOf(valor)>-1)
           {
             coincidencias.push({
-              url:"src/contacto.html",
+              url:"https://h3rrero.github.io/ROpage/src/contacto.html",
               name:"Contacto"
             });
           }
@@ -193,7 +192,7 @@
         setTimeout(function (params) {
           for (const i in coincidencias) {
             $(".modal-body").append("<p>"+coincidencias[i].name+":</p>");
-                $(".modal-body").append("<a href='"+host+"/"+coincidencias[i].url+"'>"+host+"/"+coincidencias[i].url+"</a>");
+                $(".modal-body").append("<a href='"+coincidencias[i].url+"'>"+coincidencias[i].url+"</a>");
         }
         }      
         , 1);
