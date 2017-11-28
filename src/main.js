@@ -5,48 +5,37 @@ function buscar(param) {
     $.get('https://h3rrero.github.io/ROpage/index.html', function(response) {
     if(response.indexOf(valor)>-1)
     {
-      coincidencias.push({
-        url:"https://h3rrero.github.io/ROpage/index.html",
-        name:"Index"
-      });
+     
+      $(".modal-body").append("<p>Index:</p>");
+      $(".modal-body").append("<a href='"+"https://h3rrero.github.io/ROpage/index.html"+"'>"+"https://h3rrero.github.io/ROpage/index.html"+"</a>");
     }
     
   });
     $.get('https://h3rrero.github.io/ROpage/src/noticias.html', function(response) {
       if(response.indexOf(valor)>-1)
       {
-        coincidencias.push({
-          url:"https://h3rrero.github.io/ROpage/src/noticias.html",
-          name:"Noticias"
-        });
+        $(".modal-body").append("<p>Noticias:</p>");
+        $(".modal-body").append("<a href='"+"https://h3rrero.github.io/ROpage/src/noticias.html"+"'>"+"https://h3rrero.github.io/ROpage/src/noticias.html"+"</a>");
+      
       }
   });
   $.get('https://h3rrero.github.io/ROpage/src/plantilla.html', function(response) {
     if(response.indexOf(valor)>-1)
     {
-      coincidencias.push({
-        url:"https://h3rrero.github.io/ROpage/src/plantilla.html",
-        name:"Plantilla"
-      });
+      $(".modal-body").append("<p>Plantilla:</p>");
+      $(".modal-body").append("<a href='"+"https://h3rrero.github.io/ROpage/src/plantilla.html"+"'>"+"https://h3rrero.github.io/ROpage/src/plantilla.html"+"</a>");
+    
     }
   });
   $.get('https://h3rrero.github.io/ROpage/src/contacto.html', function(response) {
     if(response.indexOf(valor)>-1)
     {
-      coincidencias.push({
-        url:"https://h3rrero.github.io/ROpage/src/contacto.html",
-        name:"Contacto"
-      });
+      $(".modal-body").append("<p>Contacto:</p>");
+      $(".modal-body").append("<a href='"+"https://h3rrero.github.io/ROpage/src/contacto.html"+"'>"+"https://h3rrero.github.io/ROpage/src/contacto.html"+"</a>");
+    
     }
   });
- 
-  setTimeout(function (params) {
-    for (const i in coincidencias) {
-      $(".modal-body").append("<p>"+coincidencias[i].name+":</p>");
-          $(".modal-body").append("<a href='"+coincidencias[i].url+"'>"+coincidencias[i].url+"</a>");
-  }
-  }      
-  , 1);
+
   
   
   }
