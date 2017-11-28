@@ -152,11 +152,11 @@
           var coincidencias = [];
           $(".modal-body").empty();
           var valor = $("#inputBuscador").val();
-          $.get('../index.html', function(response) {
+          $.get('index.html', function(response) {
           if(response.indexOf(valor)>-1)
           {
             coincidencias.push({
-              url:"/index.html",
+              url:"index.html",
               name:"Index"
             });
           }
@@ -193,7 +193,7 @@
         setTimeout(function (params) {
           for (const i in coincidencias) {
             $(".modal-body").append("<p>"+coincidencias[i].name+":</p>");
-                $(".modal-body").append("<a href='"+host+coincidencias[i].url+"'>"+host+coincidencias[i].url+"</a>");
+                $(".modal-body").append("<a href='"+host+"/"+coincidencias[i].url+"'>"+host+"/"+coincidencias[i].url+"</a>");
         }
         }      
         , 1);
