@@ -13,6 +13,9 @@ html {
     height: 100%;
 }
 
+#exampleModal{
+    z-index: 9999;
+}
 
 /* Especificidad: 10*/
 

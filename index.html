@@ -47,11 +47,35 @@
                 
                 
                 </ul>
+                <div class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="inputBuscador" placeholder="Search">
+                  </div>
+                  <button type="button" onclick="buscar()"  data-toggle="modal" data-target="#exampleModal" class="btn btn-default">Buscar</button>
+                </div>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>
           <h1>Inicio</h1>
+          <div class="modal fade" id="exampleModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultados de la búsqueda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
     <main>
+  
         <div id="carousel-example-generic" class="carousel slide centrar" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -121,6 +145,63 @@
         $('.carousel').carousel({
             interval: 2000
         })</script>
+        <script>
+          var host = location.hostname;
+        
+        function buscar() {
+          var coincidencias = [];
+          $(".modal-body").empty();
+          var valor = $("#inputBuscador").val();
+          $.get('../index.html', function(response) {
+          if(response.indexOf(valor)>-1)
+          {
+            coincidencias.push({
+              url:"/index.html",
+              name:"Index"
+            });
+          }
+          
+        });
+          $.get('src/noticias.html', function(response) {
+            if(response.indexOf(valor)>-1)
+            {
+              coincidencias.push({
+                url:"src/noticias.html",
+                name:"Noticias"
+              });
+            }
+        });
+        $.get('src/plantilla.html', function(response) {
+          if(response.indexOf(valor)>-1)
+          {
+            coincidencias.push({
+              url:"src/plantilla.html",
+              name:"Plantilla"
+            });
+          }
+        });
+        $.get('src/contacto.html', function(response) {
+          if(response.indexOf(valor)>-1)
+          {
+            coincidencias.push({
+              url:"src/contacto.html",
+              name:"Contacto"
+            });
+          }
+        });
+       
+        setTimeout(function (params) {
+          for (const i in coincidencias) {
+            $(".modal-body").append("<p>"+coincidencias[i].name+":</p>");
+                $(".modal-body").append("<a href='"+host+coincidencias[i].url+"'>"+host+coincidencias[i].url+"</a>");
+        }
+        }      
+        , 1);
+        
+        
+        }
+       
+        </script>
 </body>
 
 </html>
